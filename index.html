@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tik Tak Top Course</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Sedikit CSS biar tampilannya cakep -->
+  <style>
+    :root{
+      --brand:#4f46e5;
+      --brand2:#06b6d4;
+      --ink:#0b1220;
+      --soft:#f6f7fb;
+    }
+    body{ background: var(--soft); }
+    .navbar-glass{
+      background: rgba(11,18,32,.92);
+      backdrop-filter: blur(10px);
+    }
+    .hero{
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      color:#ffffff;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-bubble{
+      position:absolute;
+      width:420px;height:420px;border-radius:50%;
+      background: rgba(255,255,255,.12);
+      top:-170px;right:-150px;
+    }
+    .hero-bubble.two{
+      width:280px;height:280px;
+      top:auto;bottom:-140px;left:-140px;
+      background: rgba(255,255,255,.10);
+    }
+    .card-soft{
+      border:0;
+      border-radius:18px;
+      box-shadow: 0 10px 30px rgba(15,23,42,.08);
+    }
+    .section-title small{ color:#6b7280; }
+    .badge-soft{
+      background: rgba(79,70,229,.12);
+      color: var(--brand);
+      border:1px solid rgba(79,70,229,.25);
+    }
+    .btn-brand{
+      background: var(--brand);
+      border-color: var(--brand);
+      color:#8a9feb;
+    }
+    .btn-brand:hover{ filter: brightness(.95); }
+    .form-wrap{
+      background:#e1e7f3;
+      border-radius:18px;
+      box-shadow: 0 10px 30px rgba(15,23,42,.08);
+    }
+    .anchor{ scroll-margin-top: 90px; } /* biar pas klik navbar tidak ketutup */
+    footer{ background: var(--ink); }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-glass sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="#home">
+      <img src="logo uii.png" alt="Logo Tik Tak Top" width="34" height="34" class="rounded-3">
+      Tik Tak Top
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Layanan
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#pendaftaran">Pendaftaran Anggota</a></li>
+            <li><a class="dropdown-item" href="#informasi">Informasi Layanan</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="#koleksi">Koleksi</a></li>
+        <li class="nav-item"><a class="nav-link" href="#kelas">Kelas</a></li>
+
+        <li class="nav-item ms-lg-2">
+          <a class="btn btn-sm btn-brand rounded-pill px-3" href="#pendaftaran">Daftar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO / JUMBOTRON -->
+<header id="home" class="hero anchor">
+  <div class="hero-bubble"></div>
+  <div class="hero-bubble two"></div>
+
+  <div class="container py-5">
+  <div class="row justify-content-center text-center py-3">
+    <div class="col-lg-8">
+
+      <h1 class="display-5 fw-bold lh-1 mt-3">
+        Selamat Datang di <span class="text-white">Tik Tak Top Course</span>
+      </h1>
+
+      <p class="lead mt-3" style="opacity:.92;">
+        Website pendaftaran kursus komputer yang dibuat menggunakan Bootstrap
+        untuk tampilan rapi dan modern.
+      </p>
+
+      <div class="d-flex justify-content-center flex-wrap gap-2 mt-4">
+        <a href="#pendaftaran" class="btn btn-light btn-lg rounded-pill px-4 fw-semibold">
+          Daftar Sekarang
+        </a>
+        <a href="#koleksi" class="btn btn-outline-light btn-lg rounded-pill px-4">
+          Lihat Koleksi
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <!-- Wave pemisah -->
+  <svg viewBox="0 0 1440 320" aria-hidden="true">
+    <path fill="#f6f7fb" fill-opacity="1"
+      d="M0,256L48,245.3C96,235,192,213,288,197.3C384,181,480,171,576,160C672,149,768,139,864,160C960,181,1056,235,1152,240C1248,245,1344,203,1392,181.3L1440,160L1440,320L0,320Z">
+    </path>
+  </svg>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="py-5 anchor">
+  <div class="container">
+    <div class="text-center section-title mb-4">
+      <h2 class="fw-bold mb-1">About</h2>
+      <small>Tentang Tik Tak Top Course</small>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <div class="card card-soft">
+          <div class="card-body p-4 p-md-5">
+            <h5 class="fw-bold">Belajar mudah, hasil nyata.</h5>
+            <p class="text-muted mb-0">
+              Tik Tak Top Course adalah lembaga kursus komputer yang menyediakan program pelatihan digital.
+              Website ini dibuat dengan Bootstrap agar tampilan responsif dan komponen lebih cepat dibuat.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card card-soft">
+          <div class="card-body p-4">
+            <div class="fw-bold mb-2">Kontak Cepat</div>
+            <div class="text-muted">WhatsApp: 0822-60793389</div>
+            <div class="text-muted">Email: info@tiktaktop.com</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFORMASI LAYANAN -->
+<section id="informasi" class="py-5 anchor">
+  <div class="container">
+    <div class="text-center section-title mb-4">
+      <h2 class="fw-bold mb-1">Informasi Layanan</h2>
+      <small>Fasilitas yang tersedia</small>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card card-soft h-100">
+          <div class="card-body p-4 text-center">
+            <div class="fw-bold">Pendaftaran Online</div>
+            <p class="text-muted mb-0">Daftar cepat lewat form</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-soft h-100">
+          <div class="card-body p-4 text-center">
+            <div class="fw-bold">Konsultasi Program</div>
+            <p class="text-muted mb-0">Bantu pilih kelas</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-soft h-100">
+          <div class="card-body p-4 text-center">
+            <div class="fw-bold">Sertifikat</div>
+            <p class="text-muted mb-0">Setelah lulus pelatihan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KOLEKSI -->
+<section id="koleksi" class="py-5 anchor">
+  <div class="container">
+    <div class="text-center section-title mb-4">
+      <h2 class="fw-bold mb-1">Koleksi</h2>
+      <small>Dokumentasi & portofolio kegiatan</small>
+    </div>
+
+    <div class="row g-4">
+      <!-- ITEM 1 -->
+      <div class="col-md-4">
+        <div class="card card-soft h-100">
+          <div class="card-body p-4">
+            <span class="badge rounded-pill badge-soft mb-2">Dokumentasi</span>
+            <h5 class="fw-bold">Workshop Web Dasar</h5>
+            <p class="text-muted mb-3">Kegiatan belajar HTML & Bootstrap dari nol.</p>
+            <button class="btn btn-outline-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#m1">
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="col-md-4">
+        <div class="card card-soft h-100">
+          <div class="card-body p-4">
+            <span class="badge rounded-pill badge-soft mb-2">Portofolio</span>
+            <h5 class="fw-bold">Proyek Landing Page</h5>
+            <p class="text-muted mb-3">Hasil proyek peserta membuat web responsif.</p>
+            <button class="btn btn-outline-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#m2">
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 3 -->
+      <div class="col-md-4">
+        <div class="card card-soft h-100">
+          <div class="card-body p-4">
+            <span class="badge rounded-pill badge-soft mb-2">Kegiatan</span>
+            <h5 class="fw-bold">Kelas Excel Data</h5>
+            <p class="text-muted mb-3">Pengolahan data dengan rumus & tabel.</p>
+            <button class="btn btn-outline-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#m3">
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <p class="text-muted mb-0">Catatan: Jika kamu punya gambar, nanti bisa diganti jadi thumbnail.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL KOLEKSI -->
+<div class="modal fade" id="m1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Workshop Web Dasar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-muted">
+        Kegiatan pengenalan HTML, CSS, dan Bootstrap. Peserta membuat navbar, hero, dan layout card.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="m2" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Proyek Landing Page</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-muted">
+        Portofolio landing page peserta. Fokus pada desain responsif menggunakan grid system Bootstrap.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="m3" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Kelas Excel Data</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-muted">
+        Materi rumus dasar, IF, VLOOKUP/XLOOKUP, pivot table, dan visualisasi sederhana.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PENDAFTARAN -->
+<section id="pendaftaran" class="py-5 anchor">
+  <div class="container">
+    <div class="text-center section-title mb-4">
+      <h2 class="fw-bold mb-1">Pendaftaran Anggota</h2>
+      <small>Formulir pendaftaran kursus</small>
+    </div>
+
+    <div class="form-wrap p-4 p-md-5">
+      <form id="formDaftar" class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">Nama Lengkap</label>
+          <input type="text" name="nama" class="form-control form-control-lg" >
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Program Kursus</label>
+          <select name="program" class="form-select form-select-lg" required>
+            <option value="">-- Pilih Program --</option>
+            <option>Web Programming</option>
+            <option>Desain Grafis</option>
+            <option>Data Analysis</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">NIK / Nomor Induk</label>
+          <input type="text" name="nik" class="form-control form-control-lg" placeholder="Contoh: 3201xxxxxxx" required>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Nomor WhatsApp</label>
+          <input type="text" name="wa" class="form-control form-control-lg" placeholder="Contoh: 08xxxxxxxxxx" required>
+        </div>
+
+        <div class="col-12">
+          <label class="form-label">Alamat</label>
+          <textarea name="alamat" class="form-control form-control-lg" rows="3" placeholder="Tulis alamat lengkap..." required></textarea>
+        </div>
+
+        <div class="col-12 d-flex flex-wrap gap-2 justify-content-end mt-2">
+          <button type="reset" class="btn btn-outline-secondary btn-lg rounded-pill px-4">Reset</button>
+          <button type="submit" class="btn btn-brand btn-lg rounded-pill px-4">Kirim</button>
+        </div>
+
+        <div class="col-12">
+          <div id="status" class="mt-3"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- KELAS -->
+<section id="kelas" class="py-5 anchor">
+  <div class="container">
+    <div class="text-center section-title mb-4">
+      <h2 class="fw-bold mb-1">Daftar Kelas</h2>
+      <small>Pilih kelas sesuai kebutuhan</small>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card card-soft h-100">
+          <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h5 class="fw-bold mb-0">Kelas Dasar Web</h5>
+              <span class="badge rounded-pill badge-soft">Beginner</span>
+            </div>
+            <p class="text-muted mb-3">HTML, CSS, Bootstrap, layout responsif.</p>
+            <div class="d-grid">
+              <a href="#pendaftaran" class="btn btn-outline-primary rounded-pill">Ambil Kelas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card card-soft h-100">
+          <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h5 class="fw-bold mb-0">Kelas Python Pemula</h5>
+              <span class="badge rounded-pill badge-soft">Beginner</span>
+            </div>
+            <p class="text-muted mb-3">Logika dasar, variabel, kondisi, loop.</p>
+            <div class="d-grid">
+              <a href="#pendaftaran" class="btn btn-outline-primary rounded-pill">Ambil Kelas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card card-soft h-100">
+          <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h5 class="fw-bold mb-0">Kelas Excel untuk Data</h5>
+              <span class="badge rounded-pill badge-soft">Productive</span>
+            </div>
+            <p class="text-muted mb-3">Rumus, tabel, dan olah data.</p>
+            <div class="d-grid">
+              <a href="#pendaftaran" class="btn btn-outline-primary rounded-pill">Ambil Kelas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-white py-4">
+  <div class="container">
+    <div class="row g-3 align-items-center">
+      <div class="col-md-6">
+        <div class="fw-bold">Tik Tak Top Course</div>
+        <div class="text-white-50 small">Alamat: Jl. Kenangan No. 13, Kota Jambi</div>
+        <div class="text-white-50 small">Contact: 0812-3456-7891 • email@tiktaktop.com</div>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <div class="text-white-50 small">Sosial Media: Instagram @tiktaktopcourse • Facebook TikTakTop</div>
+        <div class="text-white-50 small">&copy; 2025 Tik Tak Top Course</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Kirim data ke Google Sheets (tempel URL Web App di sini) -->
+<script>
+  const SCRIPT_URL = "PASTE_URL_WEB_APP_DI_SINI";
+
+  const form = document.getElementById("formDaftar");
+  const statusDiv = document.getElementById("status");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    statusDiv.innerHTML = "<div class='alert alert-info'>Mengirim data...</div>";
+
+    if (!SCRIPT_URL || SCRIPT_URL.includes("PASTE_URL")) {
+      statusDiv.innerHTML = "<div class='alert alert-warning'>URL Apps Script belum diisi. Tempel URL Web App di SCRIPT_URL.</div>";
+      return;
+    }
+
+    try {
+      await fetch(SCRIPT_URL, { method: "POST", body: new FormData(form) });
+      statusDiv.innerHTML = "<div class='alert alert-success'>Berhasil! Data tersimpan di Google Sheets.</div>";
+      form.reset();
+    } catch (err) {
+      statusDiv.innerHTML = "<div class='alert alert-danger'>Gagal mengirim. Cek URL Web App / akses Apps Script.</div>";
+    }
+  });
+</script>
+
+</body>
+</html>
